@@ -1,0 +1,154 @@
+
+
+                                                           Design database for Zen class programme
+                                                                  users
+                                                                  codekata
+                                                                  attendance
+                                                                  topics
+                                                                  tasks
+                                                                  company_drives
+                                                                  mentors
+
+                                        db.codekata.insertMany([
+                                              {"prob_id":1,"catagory_name":"Input/Output","description":"Write a code to get the input in the given format and print the output in the given format."},
+                                              {"prob_id":2,"catagory_name":"absolute beginner","description":"Write a code to get an integer N and print the even values from 1 till N in a separate line."},
+                                              {"prob_id":3,"catagory_name":"Array","description":"A person saves his monthly saving according to given schema. He saves same amount of money which is equal to the money saved in immediate previous two months. Assume, initially he saved 1000 rupees and in first month he saved another 1000. Your task is to tell how much he had totally saved at the end of ‘n’ months"},
+                                              {"prob_id":4,"catagory_name":"absolute beginner","description":"Write a code get an integer number as input and print the sum of the digits."},
+                                              {"prob_id":5,"catagory_name":"absolute beginner","description":"Write a code get an integer number as input and print the odd and even digits of the number separately."}
+                                              ]);
+
+                                      db.users.insertMany([
+                                             {"user_name": "ajith", "email_id": "ajith@gmail.com", "batch_id": "b52wd tamil", "codekata_solved": [1, 2]},
+                                             {"user_name": "ashok", "email_id": "ashok@gmail.com", "batch_id": "b52wd tamil", "codekata_solved": [2, 3, 4]},
+                                             {"user_name": "ari haran", "email_id": "ariharan@gmail.com", "batch_id": "b52wd tamil", "codekata_solved": [3, 5]},
+                                             {"user_name": "eswaran", "email_id": "eswaran@gmail.com", "batch_id":"b52wd tamil", "codekata_solved": [1, 4]},
+                                             {"user_name": "naveen", "email_id": "naveen@gmail.com", "batch_id":"b52wd tamil", "codekata_solved": [2, 5]},
+                                             {"user_name": "premalatha", "email_id": "premalatha@gmail.com", "batch_id": "b52wd tamil", "codekata_solved": [1, 3, 4]}
+                                      
+                                                                                     ]);
+                                       db.mentors.insertMany([
+                                            { "mentor_name": "Thirupathi","email_id": "thirupathi@gmail.com", "student_id_list": [1, 2, 3, 4, 5]},
+                                            {"mentor_name": "Vasanth","email_id": "vasanth@gmail.com", "student_id_list": [6, 7, 8, 9, 10]},
+                                            {"mentor_name": "Arun kumar","email_id": "arunkumar@gmail.com", "student_id_list": [11, 12, 13, 14, 15]},
+                                            {"mentor_name": "swathy","email_id": "swathy@gmail.com", "student_id_list": [16, 17, 18, 19, 20]},
+                                            {"mentor_name": "Ajith kumar","email_id": "ajithkumar@gmail.com", "student_id_list": [21, 22, 23, 24, 25]}
+                                           ]);
+
+
+                                      db.company_drives.insertMany([ 
+                                         {"company_name": "google", "interview_date": new Date("2020-10-10"), "student_id_list": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]},
+                                         {"company_name": "zoho", "interview_date": new Date("2020-10-14"), "student_id_list": [17,18,19,20]},
+                                         {"company_name": "freshworks", "interview_date": new Date("2020-10-17"), "student_id_list": [21,22,23,24]},
+                                         {"company_name": "microsoft", "interview_date": new Date("2020-10-20"), "student_id_list": [25,26,27,29]},
+                                         {"company_name": "guvi", "interview_date": new Date("2020-10-29"), "student_id_list": [30,31,33,34]}
+                                         ]);
+
+                                      db.topics.insertMany([
+                                        {"name": "HTML", "description": "HTML", "date": new Date("2020-10-15")},
+                                        {"name": "Javascript", "description": "Javascript", "date": new Date("2020-10-16")},
+                                        {"name": "ReactJS", "description": "ReactJS", "date": new Date("2020-10-17")},
+                                        {"name": "MongoDB", "description": "MongoDB", "date": new Date("2020-10-18")},
+                                        {"name": "NodeJS", "description": "NodeJS", "date": new Date("2020-10-19")}
+                                        ]);
+
+
+                                     db.attendance.insertMany([
+                                       {"topic_id":1,"date":new Date("2020-10-15"),"present": [1,2,4], "absent": [3,5]},
+                                       {"topic_id":2,"date":new Date("2020-10-16"),"present": [2,3,4,5], "absent": [1]},
+                                       {"topic_id":3,"date":new Date("2020-10-17"),"present": [1,3,4,5], "absent": [2]},
+                                       {"topic_id":4,"date":new Date("2020-10-18"),"present": [1,2,3,5], "absent": [4]},
+                                       {"topic_id":5,"date":new Date("2020-10-19"),"present": [1,2,4,5], "absent": [3]}
+                                       ]);
+
+                                    db.tasks.insertMany([
+                                       {"task_id":1,"task_name":"create-react-app","description":"create-react-app","date":new Date("2020-10-17"),"submitted":[1,3,4], "not_submitted": [2,5]},
+                                       {"task_id":2,"task_name":"MySQL tables","description":"create tables in MySQL","date":new Date("2020-10-18"),"submitted":[1,3,4], "not_submitted": [2,5]},
+                                       {"task_id":3,"task_name":"HTML forms","description":"create a form in HTML","date":new Date("2020-10-19"),"submitted":[1,3,4], "not_submitted": [2,5]},
+                                       {"task_id":4,"task_name":"API","description":"write code to fetch data from API","date":new Date("2020-10-20"),"submitted":[1,3,4], "not_submitted": [2,5]},
+                                       {"task_id":5,"task_name":"CSS","description":"design a responsive page","date":new Date("2020-10-21"),"submitted":[1,3,4], "not_submitted": [2,5]}
+                                       ]);
+
+
+                              1)Find all the topics and tasks which are thought in the month of October
+                                db.topics.find({
+                                        "date": {
+                                           $gte: new Date("2020-10-01"),
+                                           $lt: new Date("2020-11-01")
+                                               }
+                                            })
+                               db.tasks.find({
+                                      "date": {
+                                          $gte: new Date("2020-10-01"),
+                                          $lt: new Date("2020-11-01")
+                                            }
+                                            })
+
+                              2)Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+
+                                 db.company_drives.find({
+                                               "interview_date": {
+                                                   $gte: new Date("2020-10-15"),
+                                                   $lte: new Date("2020-10-31")
+                                                    }
+                                                     })
+
+                              3)Find all the company drives and students who are appeared for the placement.
+
+
+                                       db.company_drives.find({},{
+                                                               "_id":0,
+                                                               "company_name":1,
+                                                               "student_id_list":1
+                                                                  })
+                              4)Find the number of problems solved by the user in codekata
+                                        db.users.aggregate([
+                                                              {
+                                                                $project: {
+                                                                  "user_id": 1,
+                                                                  "user_name": 1,
+                                                                   "codekata_solved_count": { $size: { $ifNull: ["$codekata_solved", []] } }
+                                                                     }
+                                                                     }
+                                                                    ])
+
+                              5)Find all the mentors with who has the mentee's count more than 15
+
+                                                       db.mentors.find(
+                                                               { $where: "this.student_id_list.length > 15" },
+                                                               { _id: 0, mentor_name: 1 }
+                                                                 )
+
+                              6)Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+
+
+                                            
+                                                  db.tasks.aggregate([
+                                                        {
+                                                                $match: {
+                                                               "date": {
+                                                                $gte: ISODate("2020-10-15T00:00:00.000Z"),
+                                                                $lt: ISODate("2020-10-31T23:59:59.999Z")
+                                                                  }
+                                                                 }
+                                                                },
+                                                                     {
+                                                                        $project: {
+                                                                         _id: 0,
+                                                                         task_name: 1,
+                                                                         date: 1,
+                                                                         no_of_not_submitted: {
+                                                                         $cond: {
+                                                                         if: { $isArray: "$not_submitted" },
+                                                                         then: { $size: "$not_submitted" },
+                                                                        else: 0
+                                                                              }
+                                                                             }
+                                                                            }
+                                                                           }
+                                                                         ])
+
+
+
+
+
+
